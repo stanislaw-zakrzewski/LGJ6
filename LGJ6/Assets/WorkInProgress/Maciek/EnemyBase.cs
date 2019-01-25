@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour {
 
-	// Use this for initialization
+    private float health;
+    private float movementSpeed;
+
+    
+    //Use this for initialization
 	void Start () {
 		
 	}
@@ -16,6 +20,11 @@ public class EnemyBase : MonoBehaviour {
 
     public void TakeDamage(float damage)
     {
+        health -= damage;
+    }
 
+    public float GetHealth()
+    {
+        return health;
     }
 }
