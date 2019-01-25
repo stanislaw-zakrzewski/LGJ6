@@ -17,6 +17,7 @@ public class GunBase : MonoBehaviour
 
     void Start()
     {
+        projectiles = new List<GameObject>();
         SetActiveEnemies();
         InvokeRepeating("SetActiveEnemies", 0, 0.1f);
         InvokeRepeating("ShootProjectile", 0, cooldown);
@@ -33,6 +34,7 @@ public class GunBase : MonoBehaviour
 
     void ShootProjectile()
     {
+        Debug.Log(projectiles.Count);
         if (target != null)
         {
             GameObject pom = Instantiate(bulletType);
@@ -41,6 +43,7 @@ public class GunBase : MonoBehaviour
             pom.GetComponent<ProjectileBase>().target = target;
             pom.GetComponent<ProjectileBase>().gun = this;
             pom.transform.position = transform.position;
+            projectiles.Add(pom);
         }
     }
 
