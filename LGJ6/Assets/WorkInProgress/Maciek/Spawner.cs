@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBase : MonoBehaviour {
+public class Spawner : MonoBehaviour {
+
+    /* tworzy wrogów*/
+
+    private List<GameObject> enemies;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +18,8 @@ public class EnemyBase : MonoBehaviour {
 		
 	}
 
-    public void TakeDamage(float damage)
+    public List<GameObject> GetEnemies()
     {
-
+        return null;
     }
 }
