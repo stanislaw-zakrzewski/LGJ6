@@ -19,7 +19,7 @@ public class GunBase : MonoBehaviour
     {
         SetActiveEnemies();
         InvokeRepeating("SetActiveEnemies", 0, 0.1f);
-        InvokeRepeating("ShootProjetile", 0, cooldown);
+        InvokeRepeating("ShootProjectile", 0, cooldown);
     }
 
     void Update()
@@ -40,6 +40,7 @@ public class GunBase : MonoBehaviour
             pom.GetComponent<ProjectileBase>().velocity = velocity;
             pom.GetComponent<ProjectileBase>().target = target;
             pom.GetComponent<ProjectileBase>().gun = this;
+            pom.transform.position = transform.position;
         }
     }
 
@@ -53,7 +54,7 @@ public class GunBase : MonoBehaviour
                 activeEnemies.Add(enemy);
             }
         }
-        if (activeEnemies.Count == 0)
+        if (activeEnemies.Count == 1)
         {
             target = activeEnemies[0];
         }
