@@ -244,6 +244,11 @@ Prefab:
       propertyPath: cooldown
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114823507200886770, guid: 98c781c07bf6eef429ba307ba684f29a,
+        type: 2}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98c781c07bf6eef429ba307ba684f29a, type: 2}
   m_IsPrefabAsset: 0

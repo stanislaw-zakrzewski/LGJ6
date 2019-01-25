@@ -19,15 +19,19 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        List<GameObject> toRemove = new List<GameObject>();
         foreach (var enemy in enemies)
         {
             if (enemy.GetComponent<EnemyBase>().GetHealth() <= 0f)
             {
                 Destroy(enemy.gameObject);
+                toRemove.Add(enemy);
             }
         }
-        enemies = enemies.Where(e => e != null).ToList();
-
+        foreach (var enemy in toRemove)
+        {
+            enemies.Remove(enemy);
+        }
         if (enemies.Count < enemiesLimit)
         {
             Spawn();
@@ -41,6 +45,6 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        enemies.Add(Instantiate(enemy));        
+        enemies.Add(Instantiate(enemy));
     }
 }
