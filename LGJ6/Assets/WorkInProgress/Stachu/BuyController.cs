@@ -73,6 +73,12 @@ public class BuyController : MonoBehaviour
         }
         GameObject newItem = Instantiate(item);
         newItem.transform.SetParent(shelfs[shelfs.Count - 1].transform);
+        newItem.GetComponent<ShopItem>().damage = shelfs.Count + 10;
+        newItem.GetComponent<ShopItem>().cooldown = 1/shelfs.Count;
+        newItem.GetComponent<ShopItem>().cost = shelfs.Count*5 -5;
+        newItem.GetComponent<ShopItem>().velocity = shelfs.Count*0.1f;
+        newItem.GetComponent<ShopItem>().range = 1000;
+        newItem.GetComponent<ShopItem>().level = shelfs.Count;
         items.Add(newItem);
 
     }
