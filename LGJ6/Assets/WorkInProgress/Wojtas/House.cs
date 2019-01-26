@@ -36,7 +36,6 @@ public class House : MonoBehaviour {
         {
             gameObject.transform.Find("koloL").transform.Rotate(new Vector3(0, 0, -1));
             gameObject.transform.Find("koloP").transform.Rotate(new Vector3(0, 0, -1));
-            gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x + 0.1f, transform.parent.transform.position.y);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
