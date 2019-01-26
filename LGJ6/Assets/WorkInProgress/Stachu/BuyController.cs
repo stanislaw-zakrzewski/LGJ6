@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,7 +27,6 @@ public class BuyController : MonoBehaviour
         {
             AddItem();
         }
-        Debug.Log(scrollbar.transform.position);
     }
 
     void FixedUpdate()
@@ -74,9 +72,9 @@ public class BuyController : MonoBehaviour
         GameObject newItem = Instantiate(item);
         newItem.transform.SetParent(shelfs[shelfs.Count - 1].transform);
         newItem.GetComponent<ShopItem>().damage = shelfs.Count + 10;
-        newItem.GetComponent<ShopItem>().cooldown = 1.0f/shelfs.Count;
-        newItem.GetComponent<ShopItem>().cost = shelfs.Count*20 -20;
-        newItem.GetComponent<ShopItem>().velocity = shelfs.Count*0.1f;
+        newItem.GetComponent<ShopItem>().cooldown = 1.0f / shelfs.Count;
+        newItem.GetComponent<ShopItem>().cost = shelfs.Count * 20 - 20;
+        newItem.GetComponent<ShopItem>().velocity = shelfs.Count * 0.1f;
         newItem.GetComponent<ShopItem>().range = 1000;
         newItem.GetComponent<ShopItem>().level = shelfs.Count;
         items.Add(newItem);

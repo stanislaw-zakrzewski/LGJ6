@@ -98,6 +98,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floor: {fileID: 0}
+  gun: {fileID: 0}
+  level: 0
+  range: 0
+  cooldown: 0
+  damage: 0
+  velocity: 0
+  cost: 0
+  textBase: {fileID: 114732990403856724, guid: c658889bf6bbcdb4e990e50bfc2f5d29, type: 2}
 --- !u!222 &222200460175894918
 CanvasRenderer:
   m_ObjectHideFlags: 1

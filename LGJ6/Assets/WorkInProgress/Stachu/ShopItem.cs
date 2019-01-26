@@ -13,9 +13,17 @@ public class ShopItem : MonoBehaviour, IDragHandler, IEndDragHandler
     public float damage;
     public float velocity;
     public float cost;
+    public Text textBase;
+    private Text text;
     void Start()
     {
         transform.position = transform.parent.transform.position;
+        Debug.Log(cost);
+        transform.parent.gameObject.GetComponentInChildren<Text>().text = cost.ToString();
+        //text = Instantiate(textBase) as Text;
+        //text.GetComponent<Text>().text = cost.ToString();
+        //text.GetComponent<Text>().transform.SetParent(transform.parent.transform);
+        //text.transform.SetParent(transform.parent.transform);
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -38,5 +46,6 @@ public class ShopItem : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             transform.parent.gameObject.GetComponent<Image>().color = Color.white;
         }
+        //text.gameObject.GetComponent<Text>().text = cost.ToString();
     }
 }

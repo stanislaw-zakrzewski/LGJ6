@@ -26,7 +26,7 @@ public class GunBase : MonoBehaviour
 
     void Update()
     {
-        if(target == null)
+        if (target == null)
         {
             SetActiveEnemies();
         }
