@@ -27,7 +27,7 @@ public class House : MonoBehaviour {
             Destroy(this.gameObject);
         }
         //TEMPORARY!!!!!!!!!!!!
-        traveledDistance += 0.01f;
+        traveledDistance += 1f;
         PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
     }
 

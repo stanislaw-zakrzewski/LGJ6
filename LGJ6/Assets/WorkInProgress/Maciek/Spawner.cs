@@ -11,10 +11,23 @@ public class Spawner : MonoBehaviour
     public GameObject house;
     private List<GameObject> enemies;
 
+    private float baseHealth = 30f;
+    private float baseSpeed = 0.01f;
+    private float baseDamage = 1f;
+    private float baseMoney = 1f;
+
+    float h;
+    float s;
+    float d;
+    float m;
     // Use this for initialization
     void Start()
     {
         enemies = new List<GameObject>();
+        h = baseHealth;
+        s = baseSpeed;
+        d = baseDamage;
+        m = baseMoney;
     }
 
     // Update is called once per frame
@@ -47,17 +60,27 @@ public class Spawner : MonoBehaviour
 
     private void AdjustSpawn(float distance)
     {
-               
-        if (Random.Range(1, 1000) % 2 == 0)
+        
+        if (((int)distance % 10) == 0)
         {
-            Spawn();
+            h += Mathf.Log10(distance);
+            s += 0.0005f;
+            d += 0.05f;
+            m += 1;
+        }
+        Debug.Log("rst " + ((int)distance % 10));
+        Debug.Log("spd " + s);
+        if (Random.Range(1, 1000) % 100 == 0)
+        {               
+            Spawn(h, s, d, EnemyBase.MovingType.linear, m);
         }   
     }
 
-    private void Spawn()
+    private void Spawn(float health, float speed, float damage, EnemyBase.MovingType type, float money)
     {
         var enem = Instantiate(enemy);
         enem.gameObject.GetComponent<Rigidbody2D>().position = transform.position;
+        enem.gameObject.GetComponent<EnemyBase>().AdjustEnemy(health, speed, damage, type, money);
         enemies.Add(enem);
     }
 }
