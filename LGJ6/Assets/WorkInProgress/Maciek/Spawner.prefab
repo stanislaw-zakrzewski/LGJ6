@@ -51,6 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707c71c6a52596b488f064f20454eaa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLimit: 0
+  enemiesLimit: 5
   enemy: {fileID: 1509867122914744, guid: d23b6966d4fe41a4d9ac453199e327ff, type: 2}
   house: {fileID: 1464837377284548, guid: f74863776c303af4996172f90248c9c5, type: 2}

@@ -83,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   startingMoney: 60
+  traveledDistance: 1
 --- !u!212 &212805405843191430
 SpriteRenderer:
   m_ObjectHideFlags: 1

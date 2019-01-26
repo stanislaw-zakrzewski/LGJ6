@@ -6,6 +6,7 @@ public class House : MonoBehaviour {
 
     public float maxHealth;
     public float startingMoney;
+    public float traveledDistance;
     private float money;
     private float health;
 
@@ -15,6 +16,7 @@ public class House : MonoBehaviour {
         money = startingMoney;
         PlayerPrefs.DeleteKey("money2");
         PlayerPrefs.SetFloat("money2", money);
+        PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
 	}
 	
 	// Update is called once per frame
@@ -24,6 +26,9 @@ public class House : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        //TEMPORARY!!!!!!!!!!!!
+        traveledDistance += 0.01f;
+        PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
     }
 
     public void TakeDamage(float damage)
