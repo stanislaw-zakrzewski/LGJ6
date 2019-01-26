@@ -34,7 +34,6 @@ public class GunBase : MonoBehaviour
 
     void ShootProjectile()
     {
-        Debug.Log(projectiles.Count);
         if (target != null)
         {
             GameObject pom = Instantiate(bulletType);
