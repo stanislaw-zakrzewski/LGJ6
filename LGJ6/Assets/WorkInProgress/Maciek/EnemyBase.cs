@@ -8,15 +8,14 @@ public class EnemyBase : MonoBehaviour {
     public float maxHealth;
     private float health;
     public float movementSpeed;
-    private float givenDamage;
+    public float givenDamage;
+    public GameObject target;
 
     
     //Use this for initialization
 	void Start () {
         //Some random numbers
-        movementSpeed = 0.05f;
         health = maxHealth;
-        givenDamage = 5f;
 	}
 	
 	// Update is called once per frame
@@ -39,4 +38,11 @@ public class EnemyBase : MonoBehaviour {
         return health;
     }
 
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<House>())
+        {
+            collision.gameObject.GetComponent<House>().TakeDamage(givenDamage);
+        }
+    }
 }

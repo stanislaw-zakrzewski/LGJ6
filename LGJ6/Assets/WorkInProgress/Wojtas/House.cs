@@ -14,7 +14,10 @@ public class House : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (health <= 0f)
+        {
+            Destroy(this.gameObject);
+        }
 	}
 
     public void TakeDamage(float damage)
