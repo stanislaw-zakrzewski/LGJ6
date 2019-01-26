@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
 
     private float baseHealth = 30f;
     private float baseSpeed = 0.01f;
-    private float baseDamage = 1f;
+    private float baseDamage = 20f;
     private float baseMoney = 1f;
 
     float h;
@@ -66,7 +66,7 @@ public class Spawner : MonoBehaviour
         {
             h += Mathf.Log10(distance);
             s += 0.0005f;
-            d += 0.05f;
+            //d += 0.05f;
             m += 0.05f;
         }
         
@@ -86,7 +86,7 @@ public class Spawner : MonoBehaviour
             enem = Instantiate(enemyType2);
         }        
         enem.gameObject.transform.position = transform.position;
-        enem.gameObject.transform.SetParent(transform);
+        enem.gameObject.transform.SetParent(transform); 
         //enem.gameObject.GetComponent<Rigidbody2D>().position = transform.position;
         
         enem.gameObject.GetComponent<EnemyBase>().AdjustEnemy(health, speed, damage, type, money);
