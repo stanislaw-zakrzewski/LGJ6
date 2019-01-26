@@ -73,7 +73,7 @@ public class BuyController : MonoBehaviour
         newItem.transform.SetParent(shelfs[shelfs.Count - 1].transform);
         newItem.GetComponent<ShopItem>().damage = shelfs.Count + 10;
         newItem.GetComponent<ShopItem>().cooldown = 1.0f / shelfs.Count;
-        newItem.GetComponent<ShopItem>().cost = shelfs.Count * 20 - 20;
+        newItem.GetComponent<ShopItem>().cost = shelfs.Count * 20 - 20 + 10;
         newItem.GetComponent<ShopItem>().velocity = shelfs.Count * 0.1f;
         newItem.GetComponent<ShopItem>().range = 1000;
         newItem.GetComponent<ShopItem>().level = shelfs.Count;

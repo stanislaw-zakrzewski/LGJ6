@@ -9,10 +9,11 @@ public class Floor : MonoBehaviour, IDropHandler
     private GameObject currentGun;
     public GameObject floor;
     public GameObject spawner;
+    public int level;
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag.GetComponent<ShopItem>().cost <= PlayerPrefs.GetFloat("money"))
+        if (eventData.pointerDrag.GetComponent<ShopItem>().cost <= PlayerPrefs.GetFloat("money") && level <= PlayerPrefs.GetInt("houseLevel"))
         {
             Debug.Log("oko");
             if (currentGun != null)

@@ -25,6 +25,7 @@ public class House : MonoBehaviour {
         //Debug.Log("siema " + money);
         if (health <= 0f)
         {
+            PlayerPrefs.SetFloat("money", 0);
             Destroy(this.gameObject);
         }
         //TEMPORARY!!!!!!!!!!!!
