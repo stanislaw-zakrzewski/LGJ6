@@ -36,13 +36,21 @@ public class Spawner : MonoBehaviour
         }
         if (enemies.Count < enemiesLimit)
         {
-            Spawn();
+            AdjustSpawn(PlayerPrefs.GetFloat("traveledDistance"));
         }
     }
 
     public List<GameObject> GetEnemies()
     {
         return enemies;
+    }
+
+    private void AdjustSpawn(float distance)
+    {
+        if (Random.Range(1, 1000) % 220 == 0)
+        {
+            Spawn();
+        }   
     }
 
     private void Spawn()
