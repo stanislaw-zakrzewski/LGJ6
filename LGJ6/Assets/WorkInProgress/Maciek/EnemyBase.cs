@@ -9,6 +9,12 @@ public class EnemyBase : MonoBehaviour {
     public float movementSpeed;
     public float givenDamage;
     public GameObject target;
+    public enum MovingType
+    {
+        linear,
+        sinus
+    }
+    public MovingType movingType;
     private float health;
 
 
@@ -24,7 +30,17 @@ public class EnemyBase : MonoBehaviour {
 
     void FixedUpdate()
     {
-        gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x+movementSpeed, Mathf.Sin(Time.frameCount/10f));
+        switch (movingType)
+        {
+            case MovingType.linear:
+                gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x + movementSpeed, 0);
+                break;
+            case MovingType.sinus:
+                gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x + movementSpeed, Mathf.Sin(Time.frameCount / 10f));
+                break;
+            default:
+                break;
+        }
     }
 
     public void TakeDamage(float damage)

@@ -45,6 +45,8 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        enemies.Add(Instantiate(enemy));
+        var enem = Instantiate(enemy);
+        enem.gameObject.GetComponent<Rigidbody2D>().position = transform.position;
+        enemies.Add(enem);
     }
 }
