@@ -8,6 +8,7 @@ public class UpdateMoney : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //GetComponent<Text>().text = PlayerPrefs.GetFloat("startingMoney").ToString();
+        
     }
 	
 	// Update is called once per frame

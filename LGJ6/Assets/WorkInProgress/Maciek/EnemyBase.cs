@@ -34,7 +34,7 @@ public class EnemyBase : MonoBehaviour {
         switch (movingType)
         {
             case MovingType.linear:
-                gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x - movementSpeed, 0);
+                gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x - movementSpeed, transform.parent.transform.position.y);
                 break;
             case MovingType.sinus:
                 gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x - movementSpeed, Mathf.Sin(Time.frameCount / 10f));
@@ -56,6 +56,7 @@ public class EnemyBase : MonoBehaviour {
 
     public void TakeDamage(float damage)
     {
+        Debug.Log("health " + health);
         health -= damage;
     }
 

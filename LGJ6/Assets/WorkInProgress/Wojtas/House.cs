@@ -14,6 +14,7 @@ public class House : MonoBehaviour {
 	void Start () {
         health = maxHealth;
         money = startingMoney;
+        traveledDistance = 1f;
         PlayerPrefs.DeleteKey("money");
         PlayerPrefs.SetFloat("money", money);
         PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
