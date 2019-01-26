@@ -690,17 +690,19 @@ Prefab:
         type: 2}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 335328414}
+      objectReference: {fileID: 0}
     - target: {fileID: 114034707054510886, guid: b87fc237fc16b5a4da60ca4b23a7b704,
         type: 2}
       propertyPath: enemyType1
       value: 
-      objectReference: {fileID: 1630560995}
+      objectReference: {fileID: 1882739632208548, guid: c86a06fad61d42f469444c1e9ad5cf4b,
+        type: 2}
     - target: {fileID: 114034707054510886, guid: b87fc237fc16b5a4da60ca4b23a7b704,
         type: 2}
       propertyPath: enemyType2
       value: 
-      objectReference: {fileID: 335328414}
+      objectReference: {fileID: 1369635112831008, guid: 3765ea3c8118ca64087f9f46102c8698,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b87fc237fc16b5a4da60ca4b23a7b704, type: 2}
   m_IsPrefabAsset: 0
