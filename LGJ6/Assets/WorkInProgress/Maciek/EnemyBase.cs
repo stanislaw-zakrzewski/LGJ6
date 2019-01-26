@@ -6,17 +6,22 @@ using UnityEngine;
 public class EnemyBase : MonoBehaviour {
 
     public float maxHealth;
-    private float health;
     public float movementSpeed;
-    private float givenDamage;
+    public float givenDamage;
+    public GameObject target;
+    public enum MovingType
+    {
+        linear,
+        sinus
+    }
+    public MovingType movingType;
+    public float moneyForKilling;
+    private float health;
 
-    
+
     //Use this for initialization
-	void Start () {
-        //Some random numbers
-        movementSpeed = 0.05f;
+    void Start () {
         health = maxHealth;
-        givenDamage = 5f;
 	}
 	
 	// Update is called once per frame
@@ -26,7 +31,17 @@ public class EnemyBase : MonoBehaviour {
 
     void FixedUpdate()
     {
-        gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x+movementSpeed, Mathf.Sin(Time.frameCount/10f));
+        switch (movingType)
+        {
+            case MovingType.linear:
+                gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x + movementSpeed, 0);
+                break;
+            case MovingType.sinus:
+                gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x + movementSpeed, Mathf.Sin(Time.frameCount / 10f));
+                break;
+            default:
+                break;
+        }
     }
 
     public void TakeDamage(float damage)
@@ -39,4 +54,11 @@ public class EnemyBase : MonoBehaviour {
         return health;
     }
 
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<House>())
+        {
+            collision.gameObject.GetComponent<House>().TakeDamage(givenDamage);
+        }
+    }
 }

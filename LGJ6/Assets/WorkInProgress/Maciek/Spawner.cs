@@ -6,9 +6,10 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    private List<GameObject> enemies;
     public int enemiesLimit;
     public GameObject enemy;
+    public GameObject house;
+    private List<GameObject> enemies;
 
     // Use this for initialization
     void Start()
@@ -24,6 +25,7 @@ public class Spawner : MonoBehaviour
         {
             if (enemy.GetComponent<EnemyBase>().GetHealth() <= 0f)
             {
+                house.gameObject.GetComponent<House>().AddMoney(enemy.gameObject.GetComponent<EnemyBase>().moneyForKilling);
                 Destroy(enemy.gameObject);
                 toRemove.Add(enemy);
             }
@@ -45,6 +47,8 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        enemies.Add(Instantiate(enemy));
+        var enem = Instantiate(enemy);
+        enem.gameObject.GetComponent<Rigidbody2D>().position = transform.position;
+        enemies.Add(enem);
     }
 }
