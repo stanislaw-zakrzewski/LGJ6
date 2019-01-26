@@ -6,15 +6,14 @@ using UnityEngine;
 public class EnemyBase : MonoBehaviour {
 
     public float maxHealth;
-    private float health;
     public float movementSpeed;
     public float givenDamage;
     public GameObject target;
+    private float health;
 
-    
+
     //Use this for initialization
-	void Start () {
-        //Some random numbers
+    void Start () {
         health = maxHealth;
 	}
 	

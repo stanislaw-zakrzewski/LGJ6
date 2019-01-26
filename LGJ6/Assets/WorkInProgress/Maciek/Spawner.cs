@@ -6,9 +6,9 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    private List<GameObject> enemies;
     public int enemiesLimit;
     public GameObject enemy;
+    private List<GameObject> enemies;
 
     // Use this for initialization
     void Start()
