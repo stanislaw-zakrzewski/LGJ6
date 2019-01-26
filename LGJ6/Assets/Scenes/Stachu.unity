@@ -502,6 +502,92 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212539738644601912, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11a28bf3dc1fad54eb2859997f8d3c67,
+        type: 3}
+    - target: {fileID: 212539738644601912, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212539738644601912, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 31.740002
+      objectReference: {fileID: 0}
+    - target: {fileID: 212539738644601912, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212763419907811082, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 829cceb43ae81f844b7113f3add90435,
+        type: 3}
+    - target: {fileID: 212763419907811082, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 212763419907811082, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 7.9350004
+      objectReference: {fileID: 0}
+    - target: {fileID: 212763419907811082, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212199330937793840, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11a28bf3dc1fad54eb2859997f8d3c67,
+        type: 3}
+    - target: {fileID: 212199330937793840, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212760725087066138, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11a28bf3dc1fad54eb2859997f8d3c67,
+        type: 3}
+    - target: {fileID: 212760725087066138, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212382164979908048, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11a28bf3dc1fad54eb2859997f8d3c67,
+        type: 3}
+    - target: {fileID: 212382164979908048, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212366750239650442, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11a28bf3dc1fad54eb2859997f8d3c67,
+        type: 3}
+    - target: {fileID: 212366750239650442, guid: 373c6055778400c4b861cb4378ab7110,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 373c6055778400c4b861cb4378ab7110, type: 2}
   m_IsPrefabAsset: 0
@@ -628,7 +714,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: ed6b2ea71a983c7468a7a1705abe7a13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c326a65ca63a7f48a13e7d6e0a2fc9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -713,7 +799,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: ed6b2ea71a983c7468a7a1705abe7a13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c326a65ca63a7f48a13e7d6e0a2fc9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
