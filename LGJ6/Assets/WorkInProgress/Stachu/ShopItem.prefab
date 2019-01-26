@@ -39,7 +39,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71308642b1b27054583e7f3461a81706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shelf: {fileID: 1664319271628362, guid: 382ff87c676e7f34e9f4e4589d4f2573, type: 2}
+  floor: {fileID: 0}
 --- !u!222 &222200460175894918
 CanvasRenderer:
   m_ObjectHideFlags: 1
