@@ -10,6 +10,7 @@ public class GunBase : MonoBehaviour
     public float cooldown;
     public float damage;
     public float velocity;
+    public float cost;
 
     private List<GameObject> activeEnemies;
     private List<GameObject> projectiles;
