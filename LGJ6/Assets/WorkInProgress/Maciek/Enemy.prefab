@@ -106,7 +106,8 @@ MonoBehaviour:
   movementSpeed: 0.05
   givenDamage: 1
   target: {fileID: 1464837377284548, guid: f74863776c303af4996172f90248c9c5, type: 2}
-  movingType: 1
+  movingType: 0
+  moneyForKilling: 10
 --- !u!212 &212802415376038812
 SpriteRenderer:
   m_ObjectHideFlags: 1

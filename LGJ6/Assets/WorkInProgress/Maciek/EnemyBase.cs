@@ -15,6 +15,7 @@ public class EnemyBase : MonoBehaviour {
         sinus
     }
     public MovingType movingType;
+    public float moneyForKilling;
     private float health;
 
 

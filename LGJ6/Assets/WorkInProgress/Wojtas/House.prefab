@@ -82,6 +82,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  startingMoney: 50
+  textMoney: {fileID: 114774139506875260, guid: fb788c96280955d47b3d5916f52e69e0,
+    type: 2}
 --- !u!212 &212805405843191430
 SpriteRenderer:
   m_ObjectHideFlags: 1

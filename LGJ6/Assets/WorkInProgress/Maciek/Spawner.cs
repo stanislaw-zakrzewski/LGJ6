@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
 
     public int enemiesLimit;
     public GameObject enemy;
+    public GameObject house;
     private List<GameObject> enemies;
 
     // Use this for initialization
@@ -24,6 +25,7 @@ public class Spawner : MonoBehaviour
         {
             if (enemy.GetComponent<EnemyBase>().GetHealth() <= 0f)
             {
+                house.gameObject.GetComponent<House>().AddMoney(enemy.gameObject.GetComponent<EnemyBase>().moneyForKilling);
                 Destroy(enemy.gameObject);
                 toRemove.Add(enemy);
             }
