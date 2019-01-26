@@ -19,9 +19,10 @@ public class House : MonoBehaviour {
         PlayerPrefs.SetFloat("money", money);
         PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         //Debug.Log("siema " + money);
         if (health <= 0f)
         {
@@ -31,6 +32,17 @@ public class House : MonoBehaviour {
         //TEMPORARY!!!!!!!!!!!!
         traveledDistance += 1f;
         PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            gameObject.transform.Find("koloL").transform.Rotate(new Vector3(0, 0, -1));
+            gameObject.transform.Find("koloP").transform.Rotate(new Vector3(0, 0, -1));
+            gameObject.GetComponent<Rigidbody2D>().position = new Vector2(gameObject.GetComponent<Rigidbody2D>().position.x + 0.1f, transform.parent.transform.position.y);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            gameObject.transform.Find("koloL").transform.Rotate(new Vector3(0, 0, 1));
+            gameObject.transform.Find("koloP").transform.Rotate(new Vector3(0, 0, 1));
+        }
     }
 
     public void TakeDamage(float damage)
