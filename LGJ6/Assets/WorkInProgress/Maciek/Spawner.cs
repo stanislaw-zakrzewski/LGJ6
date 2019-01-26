@@ -48,7 +48,7 @@ public class Spawner : MonoBehaviour
     private void AdjustSpawn(float distance)
     {
                
-        if (Random.Range(1, 1000) % 220 == 0)
+        if (Random.Range(1, 1000) % 2 == 0)
         {
             Spawn();
         }   
