@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour {
 
+    public float maxHealth;
     private float health;
     public float movementSpeed;
     private float givenDamage;
@@ -14,7 +15,7 @@ public class EnemyBase : MonoBehaviour {
 	void Start () {
         //Some random numbers
         movementSpeed = 0.05f;
-        health = 100f;
+        health = maxHealth;
         givenDamage = 5f;
 	}
 	
