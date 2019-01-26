@@ -10,6 +10,7 @@ public class BuyController : MonoBehaviour
     public int itemsCount;
     public GameObject shelf;
     public GameObject item;
+    public GameObject gun;
 
     private float initialItemsX;
     private float y;

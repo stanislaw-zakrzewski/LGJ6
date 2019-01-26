@@ -5,6 +5,7 @@ public class ShopItem : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public GameObject floor;
     private Vector3 offset = new Vector3(1, 0,0);
+    public GameObject gun;
     void Start()
     {
         transform.position = transform.parent.transform.position;
