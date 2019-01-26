@@ -29,6 +29,7 @@ public class ShopItem : MonoBehaviour, IDragHandler, IEndDragHandler
 
     void Update()
     {
+        PlayerPrefs.GetFloat("money");
         if (cost > PlayerPrefs.GetFloat("money"))
         {
             transform.parent.gameObject.GetComponent<Image>().color = Color.red;
