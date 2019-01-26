@@ -438,6 +438,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1513676023677322, guid: b87fc237fc16b5a4da60ca4b23a7b704,
     type: 2}
   m_PrefabInternal: {fileID: 2077173501}
+--- !u!1 &1202048069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1464837377284548, guid: f74863776c303af4996172f90248c9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 2105910979}
 --- !u!1 &1559435205
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +549,11 @@ Prefab:
       propertyPath: enemiesLimit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114034707054510886, guid: b87fc237fc16b5a4da60ca4b23a7b704,
+        type: 2}
+      propertyPath: house
+      value: 
+      objectReference: {fileID: 1202048069}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b87fc237fc16b5a4da60ca4b23a7b704, type: 2}
   m_IsPrefabAsset: 0

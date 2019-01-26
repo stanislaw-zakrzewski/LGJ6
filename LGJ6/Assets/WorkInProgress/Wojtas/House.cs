@@ -12,14 +12,14 @@ public class House : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         health = maxHealth;
-        money = 0;
+        money = startingMoney;
         PlayerPrefs.DeleteKey("money2");
-        PlayerPrefs.SetFloat("money2", 0);
+        PlayerPrefs.SetFloat("money2", money);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("siema " + money);
+        //Debug.Log("siema " + money);
         if (health <= 0f)
         {
             Destroy(this.gameObject);
@@ -33,9 +33,9 @@ public class House : MonoBehaviour {
 
     public void AddMoney(float amount)
     {
-        Debug.Log("przed " + money);
+        //Debug.Log("przed " + money);
         money += amount;
-        Debug.Log("po " + money);
+        //Debug.Log("po " + money);
         PlayerPrefs.SetFloat("money2", money);
     }
 
