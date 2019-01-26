@@ -7,7 +7,8 @@ public class Spawner : MonoBehaviour
 {
 
     public int enemiesLimit;
-    public GameObject enemy;
+    public GameObject enemyType1;
+    public GameObject enemyType2;
     public GameObject house;
     private List<GameObject> enemies;
 
@@ -36,7 +37,7 @@ public class Spawner : MonoBehaviour
         List<GameObject> toRemove = new List<GameObject>();
         foreach (var enemy in enemies)
         {
-            Debug.Log("Health in remove " + enemy.GetComponent<EnemyBase>().GetHealth());
+
             if (enemy.GetComponent<EnemyBase>().GetHealth() <= 0f)
             {
                 house.gameObject.GetComponent<House>().AddMoney(enemy.gameObject.GetComponent<EnemyBase>().moneyForKilling);
@@ -78,7 +79,13 @@ public class Spawner : MonoBehaviour
 
     private void Spawn(float health, float speed, float damage, EnemyBase.MovingType type, float money)
     {
-        var enem = Instantiate(enemy);
+        GameObject enem;
+        if (Time.frameCount % 5 == 0)
+        {
+            enem = Instantiate(enemyType1);
+        } else {
+            enem = Instantiate(enemyType2);
+        }        
         enem.gameObject.transform.position = transform.position;
         enem.gameObject.transform.SetParent(transform);
         //enem.gameObject.GetComponent<Rigidbody2D>().position = transform.position;

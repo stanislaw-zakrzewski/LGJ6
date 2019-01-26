@@ -16,7 +16,7 @@ public class EnemyBase : MonoBehaviour {
     }
     public MovingType movingType;
     public float moneyForKilling;
-    private float health;
+    protected float health;
 
 
     //Use this for initialization
@@ -56,7 +56,6 @@ public class EnemyBase : MonoBehaviour {
 
     public void TakeDamage(float damage)
     {
-        Debug.Log("health " + health);
         health -= damage;
     }
 
