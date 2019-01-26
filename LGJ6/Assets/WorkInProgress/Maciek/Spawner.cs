@@ -36,7 +36,6 @@ public class Spawner : MonoBehaviour
         List<GameObject> toRemove = new List<GameObject>();
         foreach (var enemy in enemies)
         {
-            Debug.Log("Health in remove " + enemy.GetComponent<EnemyBase>().GetHealth());
             if (enemy.GetComponent<EnemyBase>().GetHealth() <= 0f)
             {
                 house.gameObject.GetComponent<House>().AddMoney(enemy.gameObject.GetComponent<EnemyBase>().moneyForKilling);

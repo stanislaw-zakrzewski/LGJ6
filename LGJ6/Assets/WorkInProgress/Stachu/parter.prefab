@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 50811809664735086}
   - component: {fileID: 60353068731291620}
   - component: {fileID: 114312498716040652}
+  - component: {fileID: 114573361413279882}
   m_Layer: 0
   m_Name: parter
   m_TagString: Untagged
@@ -1626,6 +1627,36 @@ MonoBehaviour:
   maxHealth: 100
   startingMoney: 20
   traveledDistance: 1
+--- !u!114 &114573361413279882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1924165337724140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090c433dfd9b07b4c9bd35f5d0d29eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floors:
+  - {fileID: 1245140756519482}
+  - {fileID: 1566028483419452}
+  - {fileID: 1599943436716010}
+  - {fileID: 1584379442516664}
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  costs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  floor2Cost: 30
+  floor3Cost: 50
+  floor4Cost: 100
+  floor5Cost: 200
 --- !u!212 &212199330937793840
 SpriteRenderer:
   m_ObjectHideFlags: 1

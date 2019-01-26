@@ -415,6 +415,31 @@ Prefab:
       propertyPath: m_Name
       value: Cost5
       objectReference: {fileID: 0}
+    - target: {fileID: 114090958645934068, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114049755482985006, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114075359512336194, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850399524723398, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: level
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036548830896694, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: level
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80811420615f376498cf382e93a146c0, type: 2}
   m_IsPrefabAsset: 0
