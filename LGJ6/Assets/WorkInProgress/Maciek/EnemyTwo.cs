@@ -14,7 +14,7 @@ public class EnemyTwo : EnemyBase {
     }
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update () {     
+        
 	}
 }
