@@ -2,7 +2,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ShopItem : MonoBehaviour, IDragHandler, IEndDragHandler
+public class ShopItem : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEnterHandler
 {
     public GameObject floor;
     private Vector3 offset = new Vector3(1, 0,0);
@@ -47,5 +47,19 @@ public class ShopItem : MonoBehaviour, IDragHandler, IEndDragHandler
             transform.parent.gameObject.GetComponent<Image>().color = Color.white;
         }
         //text.gameObject.GetComponent<Text>().text = cost.ToString();
+    }
+
+    private void OnMouseOver()
+    {
+        Debug.Log("kurwa");
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        PlayerPrefs.SetFloat("damage", damage);
+        PlayerPrefs.SetFloat("cooldown", cooldown);
+        PlayerPrefs.SetFloat("range", range);
+        PlayerPrefs.SetFloat("velocity", velocity);
+        PlayerPrefs.SetFloat("cost", cost);
     }
 }
