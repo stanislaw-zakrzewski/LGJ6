@@ -15,7 +15,6 @@ public class Observer : MonoBehaviour {
         //If something was hit, the RaycastHit2D.collider will not be null.
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.transform.name);
             if(hit.collider.gameObject.GetComponent<GunBase>())
             {
                 var g = hit.collider.gameObject.GetComponent<GunBase>();
