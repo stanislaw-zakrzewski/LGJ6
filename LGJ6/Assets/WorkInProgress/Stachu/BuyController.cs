@@ -18,9 +18,11 @@ public class BuyController : MonoBehaviour
     private float totalItemsLength;
     public List<Sprite> guns;
     public List<Sprite> parts;
+    private float dist;
 
     void Start()
     {
+        dist = 0;
         shelfs = new List<GameObject>();
         items = new List<GameObject>();
         y = itemsPlane.transform.position.y;
@@ -33,6 +35,13 @@ public class BuyController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (PlayerPrefs.GetFloat("traveledDistance") > dist + 5)
+        {
+            dist = PlayerPrefs.GetFloat("traveledDistance");
+            AddItem();
+        }
+        
+
         scrollbar.transform.position = new Vector2(scrollbar.transform.position.x, 27);
         float width = itemsPlane.GetComponent<RectTransform>().rect.size.x;
         itemsPlane.transform.position = new Vector2(initialItemsX - scrollbar.value * (width - 1920), y);
@@ -80,8 +89,20 @@ public class BuyController : MonoBehaviour
         if (shelfs.Count % 3 == 2) scl = 1.3f;
         int ct = shelfs.Count / 3;
         newItem.GetComponent<ShopItem>().cost = (int)((100 + ct * ct * ct) * scl);
-        newItem.GetComponent<ShopItem>().velocity = shelfs.Count * 0.1f;
-        newItem.GetComponent<ShopItem>().range = 1000;
+
+        // dist = velocity + (damage + lifesteal) / cooldown
+
+        float ss = 1f / (1f + Mathf.Pow(2.718f, -shelfs.Count / 5f)) * 4500;
+        float lvl = (dist + 10)*scl;
+        float lvlP = lvl;
+        
+        newItem.GetComponent<ShopItem>().velocity = Random.Range(500, 500 + ss) / 10000;
+        lvl -= newItem.GetComponent<ShopItem>().velocity;
+        newItem.GetComponent<ShopItem>().cooldown = Random.Range(0.2f, 2f);
+        lvl *= newItem.GetComponent<ShopItem>().cooldown;
+        newItem.GetComponent<ShopItem>().range = Random.Range(0f, lvl/lvlP*2f);
+        lvl /= newItem.GetComponent<ShopItem>().range;
+        newItem.GetComponent<ShopItem>().damage = lvl;
         newItem.GetComponent<ShopItem>().level = shelfs.Count;
         newItem.GetComponent<ShopItem>().gunSprite = guns[Random.Range(0, 7)];
         newItem.GetComponent<ShopItem>().part1Sprite = parts[Random.Range(0, 2)];
