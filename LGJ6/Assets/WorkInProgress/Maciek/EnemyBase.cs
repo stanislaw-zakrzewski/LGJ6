@@ -22,7 +22,7 @@ public class EnemyBase : MonoBehaviour {
     public Sprite el1;
     public Sprite el2;
     public Sprite el3;
-    protected float health;
+    public float health;
     protected int level;
     protected int prevLevel;
 
