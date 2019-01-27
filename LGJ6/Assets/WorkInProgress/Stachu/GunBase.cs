@@ -29,7 +29,6 @@ public class GunBase : MonoBehaviour
 
     void Update()
     {
-        range = 1000;
         if (target == null)
         {
             SetActiveEnemies();
@@ -59,10 +58,10 @@ public class GunBase : MonoBehaviour
         activeEnemies = new List<GameObject>();
         foreach (var enemy in spawner.GetComponent<Spawner>().GetEnemies())
         {
-            if (Vector2.Distance(transform.position, enemy.transform.position) <= range)
-            {
+            //if (Vector2.Distance(transform.position, enemy.gameObject.GetComponent<Rigidbody2D>().position) <= range)
+            //{
                 activeEnemies.Add(enemy);
-            }
+            //}
         }
         if (activeEnemies.Count == 1)
         {
@@ -70,7 +69,7 @@ public class GunBase : MonoBehaviour
         }
         else if (activeEnemies.Count > 1)
         {
-            activeEnemies.OrderBy(e => Vector2.Distance(e.transform.position, transform.position));
+            activeEnemies.OrderBy(e => Vector2.Distance(transform.position, e.gameObject.GetComponent<Rigidbody2D>().position));
             target = activeEnemies[0];
         }
     }
@@ -79,10 +78,5 @@ public class GunBase : MonoBehaviour
     {
         Destroy(projectileToReturn);
         projectiles.Remove(projectileToReturn);
-    }
-
-    public void OnMouseOver(PointerEventData eventData)
-    {
-        Debug.Log("nos");
     }
 }
