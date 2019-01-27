@@ -63,9 +63,8 @@ public class Spawner : MonoBehaviour
     {
         m = (int)((3 + distance * distance) / 10f);
         
-        float ss = 1f / (1f + Mathf.Pow(2.718f, -distance / 100f))*1000;
-
-        s = Random.Range(100, ss) / 10000f;
+        float ss = 1f / (1f + Mathf.Pow(2.718f, -distance / 10000f))*1000;
+        s = Random.Range(10, 10 + ss) / 10000f;
 
         h = 10 + distance / s;
         
