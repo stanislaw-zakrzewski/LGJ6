@@ -65,7 +65,7 @@ public class Spawner : MonoBehaviour
 
     private void AdjustSpawn(float distance)
     {
-        m = 5 + (int)((3 + Mathf.Pow(distance, 1.3f)) / 10f);
+        m = 6 + (int)((3 + Mathf.Pow(distance, 1.1f)) / 10f);
         
         float ss = 1f / (1f + Mathf.Pow(2.718f, -distance / 10000f))*1000;
         s = Random.Range(10, 10 + ss) / 10000f;
