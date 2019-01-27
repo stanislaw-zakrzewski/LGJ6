@@ -12,6 +12,8 @@ public class GunBase : MonoBehaviour
     public float damage;
     public float velocity;
     public float cost;
+    public Sprite bulletSprite;
+    public Color bulletColor;
 
     private List<GameObject> activeEnemies;
     private List<GameObject> projectiles;
@@ -43,6 +45,8 @@ public class GunBase : MonoBehaviour
             pom.GetComponent<ProjectileBase>().velocity = velocity;
             pom.GetComponent<ProjectileBase>().target = target;
             pom.GetComponent<ProjectileBase>().gun = this;
+            pom.GetComponent<SpriteRenderer>().sprite = bulletSprite;
+            pom.GetComponent<SpriteRenderer>().color = bulletColor;
             pom.transform.position = transform.position;
             projectiles.Add(pom);
         }
