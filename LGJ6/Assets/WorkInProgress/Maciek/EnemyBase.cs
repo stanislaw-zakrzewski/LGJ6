@@ -61,6 +61,7 @@ public class EnemyBase : MonoBehaviour {
         {
             AdjustToLevel();
             RngLook();
+            ChangeSprite();
         }
         
     }
@@ -83,7 +84,7 @@ public class EnemyBase : MonoBehaviour {
     }
     public void ChangeSprite()
     {
-        var T = UnityEngine.Random.Range(1, 5);
+        var T = UnityEngine.Random.Range(1, 35);
         if (T % 2 == 0)
         {
             gameObject.transform.Find("Add1").GetComponent<SpriteRenderer>().sprite = el1;
