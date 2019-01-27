@@ -9,6 +9,7 @@ public class House : MonoBehaviour {
     public float traveledDistance;
     private float money;
     private float health;
+    public GameObject mapMove;
 
 	// Use this for initialization
 	void Start () {
@@ -36,11 +37,13 @@ public class House : MonoBehaviour {
         {
             gameObject.transform.Find("koloL").transform.Rotate(new Vector3(0, 0, -1));
             gameObject.transform.Find("koloP").transform.Rotate(new Vector3(0, 0, -1));
+            mapMove.gameObject.GetComponent<MapGenerator>().MoveRight();
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             gameObject.transform.Find("koloL").transform.Rotate(new Vector3(0, 0, 1));
             gameObject.transform.Find("koloP").transform.Rotate(new Vector3(0, 0, 1));
+            mapMove.gameObject.GetComponent<MapGenerator>().MoveLeft();
         }
     }
 
