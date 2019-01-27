@@ -33,20 +33,25 @@ public class House : MonoBehaviour {
             Destroy(this.gameObject);
         }
         //TEMPORARY!!!!!!!!!!!!
-        traveledDistance += 1f;
-        PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
+        
         if (Input.GetKey(KeyCode.RightArrow))
         {
             gameObject.transform.Find("koloL").transform.Rotate(new Vector3(0, 0, -1));
             gameObject.transform.Find("koloP").transform.Rotate(new Vector3(0, 0, -1));
             mapMove.gameObject.GetComponent<MapGenerator>().MoveRight();
+            traveledDistance += 0.01f;
+            PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             gameObject.transform.Find("koloL").transform.Rotate(new Vector3(0, 0, 1));
             gameObject.transform.Find("koloP").transform.Rotate(new Vector3(0, 0, 1));
             mapMove.gameObject.GetComponent<MapGenerator>().MoveLeft();
+            if (traveledDistance - 0.01f < 0) traveledDistance = 0f;
+            else traveledDistance -= 0.01f;
+            PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
         }
+        Debug.Log(traveledDistance);
     }
 
     public void TakeDamage(float damage)
