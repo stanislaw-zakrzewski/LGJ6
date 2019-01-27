@@ -12,6 +12,7 @@ public class FloorBuilding : MonoBehaviour
     public float floor3Cost;
     public float floor4Cost;
     public float floor5Cost;
+    public GameObject roof;
 
     private GameObject currentButton;
     private float currentCost;
@@ -78,6 +79,7 @@ public class FloorBuilding : MonoBehaviour
             floors[button - 1].GetComponent<SpriteRenderer>().enabled = true;
             Debug.Log("nos");
             PlayerPrefs.SetInt("houseLevel", PlayerPrefs.GetInt("houseLevel") + 1);
+            roof.transform.position = floors[button - 1].transform.position + new Vector3(0,0,0);
         }
     }
 }
