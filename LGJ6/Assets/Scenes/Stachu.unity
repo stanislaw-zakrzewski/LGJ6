@@ -699,6 +699,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: guns.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: parts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 224461547903503640, guid: 80811420615f376498cf382e93a146c0,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -849,6 +859,106 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1718095296189098, guid: 80811420615f376498cf382e93a146c0, type: 2}
+      propertyPath: m_Name
+      value: Funds
+      objectReference: {fileID: 0}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: b02319b39caf1b149af43b49f0e12549,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 23745aac06b279244a0828437417c88e,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: guns.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 613883ebf8f49514f9c1c8e5055edcee,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: guns.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: dc5d892ba5cf9d2458801e4616de1df9,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: guns.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 125742795d09a2b4fa3cbd7c8f6758b1,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: guns.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0feb73f369e756e4b9a4b5fc7183a448,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: guns.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: e3d136d35a3d30d4db64cb6c359c2bd5,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: guns.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: b49c4f8236d2d064a87ae8231084d9a9,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: parts.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6913930392dbff0438d0fc1a56f53a71,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: parts.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2686095a81e2cfa4d963a6e290c25e25,
+        type: 3}
+    - target: {fileID: 114214080666615190, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: parts.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: abc6e4bf4553f3e47a6a2c1410e5d8dc,
+        type: 3}
+    - target: {fileID: 114743353384245700, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef,
+        type: 2}
+    - target: {fileID: 114067134675031818, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef,
+        type: 2}
+    - target: {fileID: 114700621803424700, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef,
+        type: 2}
+    - target: {fileID: 114454324388758500, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef,
+        type: 2}
+    - target: {fileID: 114597412756957098, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80811420615f376498cf382e93a146c0, type: 2}
   m_IsPrefabAsset: 0
