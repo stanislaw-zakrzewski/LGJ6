@@ -30,6 +30,14 @@ public class Floor : MonoBehaviour, IDropHandler
             currentGun.transform.SetParent(floor.transform);
             currentGun.transform.position = new Vector2(floor.transform.position.x + 2, floor.transform.position.y + .7f);
             currentGun.GetComponent<GunBase>().spawner = spawner;
+            currentGun.gameObject.GetComponent<SpriteRenderer>().sprite = eventData.pointerDrag.GetComponent<ShopItem>().gunSprite;
+            currentGun.gameObject.GetComponent<SpriteRenderer>().color = eventData.pointerDrag.GetComponent<ShopItem>().gunColor;
+            currentGun.gameObject.transform.Find("Part1").GetComponent<SpriteRenderer>().sprite = eventData.pointerDrag.GetComponent<ShopItem>().part1Sprite;
+            currentGun.gameObject.transform.Find("Part1").GetComponent<SpriteRenderer>().color = eventData.pointerDrag.GetComponent<ShopItem>().part1Color;
+            currentGun.gameObject.transform.Find("Part2").GetComponent<SpriteRenderer>().sprite = eventData.pointerDrag.GetComponent<ShopItem>().part2Sprite;
+            currentGun.gameObject.transform.Find("Part2").GetComponent<SpriteRenderer>().color = eventData.pointerDrag.GetComponent<ShopItem>().part2Color;
+            currentGun.gameObject.transform.Find("Part3").GetComponent<SpriteRenderer>().sprite = eventData.pointerDrag.GetComponent<ShopItem>().part3Sprite;
+            currentGun.gameObject.transform.Find("Part3").GetComponent<SpriteRenderer>().color = eventData.pointerDrag.GetComponent<ShopItem>().part3Color;
             PlayerPrefs.SetFloat("money", PlayerPrefs.GetFloat("money") - eventData.pointerDrag.GetComponent<ShopItem>().cost);
         }
     }
