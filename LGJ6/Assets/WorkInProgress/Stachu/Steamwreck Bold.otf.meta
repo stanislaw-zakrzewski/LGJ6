@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a4371f1729e7eba4a99d3bb03bf84a45
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Steamwreck
+  fontNames:
+  - Steamwreck
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5144bc9b1571f5e49a0a8a37992a58f4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
