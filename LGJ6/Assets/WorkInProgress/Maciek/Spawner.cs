@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
         d = baseDamage;
         m = baseMoney;
     }
-    float SpawnCooldown = 1;
+    float SpawnCooldown = 2f;
     float SpawnTime = 0;
     // Update is called once per frame
     void Update()
@@ -51,7 +51,7 @@ public class Spawner : MonoBehaviour
         }
 
         SpawnTime += Time.deltaTime;
-        if (enemies.Count < enemiesLimit && SpawnTime > SpawnCooldown)
+        if (enemies.Count < enemiesLimit && SpawnTime > SpawnCooldown + SpawnCooldown / (1 + PlayerPrefs.GetFloat("traveledDistance")/10f))
         {
             SpawnTime = 0;
             AdjustSpawn(PlayerPrefs.GetFloat("traveledDistance"));
@@ -70,7 +70,7 @@ public class Spawner : MonoBehaviour
         float ss = 1f / (1f + Mathf.Pow(2.718f, -distance / 10000f))*1000;
         s = Random.Range(10, 10 + ss) / 10000f;
 
-        h = 10 + distance / s;
+        h = 5 + distance * s * 50;
                     
         Spawn(h, s, d, EnemyBase.MovingType.linear, m);
     }
