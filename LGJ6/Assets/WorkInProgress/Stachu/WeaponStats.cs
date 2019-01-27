@@ -28,10 +28,10 @@ public class WeaponStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerPrefs.GetFloat("damage") != 0) damage.text = PlayerPrefs.GetFloat("damage").ToString();
+        if (PlayerPrefs.GetFloat("damage") != 0) damage.text = PlayerPrefs.GetFloat("damage").ToString("F2");
         if (PlayerPrefs.GetFloat("cooldown") != 0) cooldown.text = PlayerPrefs.GetFloat("cooldown").ToString("F2");
-        if (PlayerPrefs.GetFloat("range") != 0) range.text = PlayerPrefs.GetFloat("range").ToString();
-        if (PlayerPrefs.GetFloat("velocity") != 0) velocity.text = PlayerPrefs.GetFloat("velocity").ToString();
+        if (PlayerPrefs.GetFloat("range") != 0) range.text = PlayerPrefs.GetFloat("range").ToString("F2");
+        if (PlayerPrefs.GetFloat("velocity") != 0) velocity.text = PlayerPrefs.GetFloat("velocity").ToString("F2");
         if (PlayerPrefs.GetFloat("cost") != 0) cost.text = ((int)PlayerPrefs.GetFloat("cost")).ToString() + "$";
     }
 
