@@ -88,7 +88,7 @@ public class BuyController : MonoBehaviour
         if (shelfs.Count % 3 == 0) scl = 0.7f;
         if (shelfs.Count % 3 == 2) scl = 1.3f;
         int ct = shelfs.Count / 3;
-        newItem.GetComponent<ShopItem>().cost = (int)((50 + ct * ct * ct * ct) * scl);
+        newItem.GetComponent<ShopItem>().cost = (int)((50 + Mathf.Pow(ct, 4.5f)) * scl);
 
         // dist = velocity + (damage + lifesteal) / cooldown
 
