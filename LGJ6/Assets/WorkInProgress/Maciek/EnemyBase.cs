@@ -56,16 +56,18 @@ public class EnemyBase : MonoBehaviour {
         }
         prevLevel = level;
         level = (int)((maxHealth + moneyForKilling) / (movementSpeed + givenDamage));
-        Debug.Log("Level: " + level);
+        //Debug.Log("Level: " + level);
         if (prevLevel != level)
         {
             AdjustToLevel();
+            RngLook();
+            ChangeSprite();
         }
         
     }
     public void RngLook()
     {
-        switch(UnityEngine.Random.Range(1, 3))
+        switch(UnityEngine.Random.Range(1, 3)) 
         {
             case 1:
                 gameObject.GetComponent<SpriteRenderer>().sprite = korp1;
@@ -79,31 +81,24 @@ public class EnemyBase : MonoBehaviour {
             default:
                 break;
         }
-
     }
     public void ChangeSprite()
     {
-        var T = UnityEngine.Random.Range(1, 5);
+        var T = UnityEngine.Random.Range(1, 35);
         if (T % 2 == 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = korp1;
-
             gameObject.transform.Find("Add1").GetComponent<SpriteRenderer>().sprite = el1;
             gameObject.transform.Find("Add3").GetComponent<SpriteRenderer>().sprite = el2;
             gameObject.transform.Find("Add5").GetComponent<SpriteRenderer>().sprite = el3;
         }
         if (T % 3 == 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = korp2;
-
             gameObject.transform.Find("Add1").GetComponent<SpriteRenderer>().sprite = el1;
             gameObject.transform.Find("Add2").GetComponent<SpriteRenderer>().sprite = el2;
             gameObject.transform.Find("Add4").GetComponent<SpriteRenderer>().sprite = el3;
         }
         if (T % 5 == 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = korp3;
-
             gameObject.transform.Find("Add1").GetComponent<SpriteRenderer>().sprite = el1;
             gameObject.transform.Find("Add2").GetComponent<SpriteRenderer>().sprite = el2;
             gameObject.transform.Find("Add4").GetComponent<SpriteRenderer>().sprite = el3;
@@ -117,24 +112,24 @@ public class EnemyBase : MonoBehaviour {
         switch (t)
         {
             case 0:
-                Color a = UnityEngine.Random.ColorHSV();
-                SetToColor(a);
+                SetToColor(UnityEngine.Random.ColorHSV());
+                SetKorpColor(UnityEngine.Random.ColorHSV());
                 break;
             case 1:
-                Color b = UnityEngine.Random.ColorHSV();
-                SetToColor(b);
+                SetToColor(UnityEngine.Random.ColorHSV());
+                SetKorpColor(UnityEngine.Random.ColorHSV());
                 break;
             case 2:
-                Color c = UnityEngine.Random.ColorHSV();
-                SetToColor(c);
+                SetToColor(UnityEngine.Random.ColorHSV());
+                SetKorpColor(UnityEngine.Random.ColorHSV());
                 break;
             case 3:
-                Color d = UnityEngine.Random.ColorHSV();
-                SetToColor(d);
+                SetToColor(UnityEngine.Random.ColorHSV());
+                SetKorpColor(UnityEngine.Random.ColorHSV());
                 break;
             case 4:
-                Color e = UnityEngine.Random.ColorHSV();
-                SetToColor(e);
+                SetToColor(UnityEngine.Random.ColorHSV());
+                SetKorpColor(UnityEngine.Random.ColorHSV());
                 break;
             default:
                 break;
@@ -154,7 +149,6 @@ public class EnemyBase : MonoBehaviour {
     public void TakeDamage(float damage)
     {
         health -= damage;
-        //ChangeSprite();
     }
 
     public float GetHealth()
@@ -178,5 +172,10 @@ public class EnemyBase : MonoBehaviour {
         gameObject.transform.Find("Add3").GetComponent<SpriteRenderer>().color = c;
         gameObject.transform.Find("Add4").GetComponent<SpriteRenderer>().color = c;
         gameObject.transform.Find("Add5").GetComponent<SpriteRenderer>().color = c;
+    }
+
+    protected void SetKorpColor(Color c)
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = c;
     }
 }
