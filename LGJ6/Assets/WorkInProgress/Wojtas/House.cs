@@ -8,7 +8,7 @@ public class House : MonoBehaviour {
     public float startingMoney;
     public float traveledDistance;
     private float money;
-    private float health;
+    public float health;
     public GameObject mapMove;
 
 	// Use this for initialization
@@ -19,7 +19,9 @@ public class House : MonoBehaviour {
         PlayerPrefs.DeleteKey("money");
         PlayerPrefs.SetFloat("money", money);
         PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
-	}
+        PlayerPrefs.SetFloat("health", health);
+        PlayerPrefs.SetFloat("maxHealth", maxHealth);
+    }
 
     // Update is called once per frame
     void Update()
@@ -50,6 +52,7 @@ public class House : MonoBehaviour {
     public void TakeDamage(float damage)
     {
         health -= damage;
+        PlayerPrefs.SetFloat("health", health);
     }
 
     public void AddMoney(float amount)
