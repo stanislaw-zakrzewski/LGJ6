@@ -357,16 +357,6 @@ Prefab:
       propertyPath: mapMove
       value: 
       objectReference: {fileID: 2076222234}
-    - target: {fileID: 114260943274291262, guid: 373c6055778400c4b861cb4378ab7110,
-        type: 2}
-      propertyPath: floor2Cost
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 114260943274291262, guid: 373c6055778400c4b861cb4378ab7110,
-        type: 2}
-      propertyPath: floor3Cost
-      value: 50
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 373c6055778400c4b861cb4378ab7110, type: 2}
   m_IsPrefabAsset: 0
