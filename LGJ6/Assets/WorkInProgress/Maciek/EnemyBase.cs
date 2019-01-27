@@ -24,13 +24,17 @@ public class EnemyBase : MonoBehaviour {
     public Sprite el3;
     protected float health;
     protected int level;
+    protected int prevLevel;
 
 
     //Use this for initialization
     void Start () {
         health = maxHealth;
         level = 0;
-	}
+        prevLevel = 0;
+        RngLook();
+        SetToColor(Color.white);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -50,13 +54,36 @@ public class EnemyBase : MonoBehaviour {
             default:
                 break;
         }
+        prevLevel = level;
         level = (int)((maxHealth + moneyForKilling) / (movementSpeed + givenDamage));
         Debug.Log("Level: " + level);
+        if (prevLevel != level)
+        {
+            AdjustToLevel();
+        }
+        
     }
+    public void RngLook()
+    {
+        switch(UnityEngine.Random.Range(1, 3))
+        {
+            case 1:
+                gameObject.GetComponent<SpriteRenderer>().sprite = korp1;
+                break;
+            case 2:
+                gameObject.GetComponent<SpriteRenderer>().sprite = korp2;
+                break;
+            case 3:
+                gameObject.GetComponent<SpriteRenderer>().sprite = korp3;
+                break;
+            default:
+                break;
+        }
 
+    }
     public void ChangeSprite()
     {
-        var T = UnityEngine.Random.Range(1, 10);
+        var T = UnityEngine.Random.Range(1, 5);
         if (T % 2 == 0)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = korp1;
@@ -84,6 +111,36 @@ public class EnemyBase : MonoBehaviour {
         
     }
 
+    public void AdjustToLevel()
+    {
+        int t = level % 5;
+        switch (t)
+        {
+            case 0:
+                Color a = UnityEngine.Random.ColorHSV();
+                SetToColor(a);
+                break;
+            case 1:
+                Color b = UnityEngine.Random.ColorHSV();
+                SetToColor(b);
+                break;
+            case 2:
+                Color c = UnityEngine.Random.ColorHSV();
+                SetToColor(c);
+                break;
+            case 3:
+                Color d = UnityEngine.Random.ColorHSV();
+                SetToColor(d);
+                break;
+            case 4:
+                Color e = UnityEngine.Random.ColorHSV();
+                SetToColor(e);
+                break;
+            default:
+                break;
+        }
+    }
+
     public void AdjustEnemy(float health, float speed, float damage, MovingType type, float money)
     {
         maxHealth = health;
@@ -97,7 +154,7 @@ public class EnemyBase : MonoBehaviour {
     public void TakeDamage(float damage)
     {
         health -= damage;
-        ChangeSprite();
+        //ChangeSprite();
     }
 
     public float GetHealth()
@@ -112,5 +169,14 @@ public class EnemyBase : MonoBehaviour {
             collision.gameObject.GetComponent<House>().TakeDamage(givenDamage);
             
         }
+    }
+
+    protected void SetToColor(Color c)
+    {
+        gameObject.transform.Find("Add1").GetComponent<SpriteRenderer>().color = c;
+        gameObject.transform.Find("Add2").GetComponent<SpriteRenderer>().color = c;
+        gameObject.transform.Find("Add3").GetComponent<SpriteRenderer>().color = c;
+        gameObject.transform.Find("Add4").GetComponent<SpriteRenderer>().color = c;
+        gameObject.transform.Find("Add5").GetComponent<SpriteRenderer>().color = c;
     }
 }
