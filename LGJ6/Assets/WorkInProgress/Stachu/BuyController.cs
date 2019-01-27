@@ -93,7 +93,7 @@ public class BuyController : MonoBehaviour
         // dist = velocity + (damage + lifesteal) / cooldown
 
         float ss = 1f / (1f + Mathf.Pow(2.718f, -shelfs.Count / 5f)) * 4500;
-        float lvl = (dist + 10)*scl;
+        float lvl = (dist*10 + 10)*scl;
         float lvlP = lvl;
         
         newItem.GetComponent<ShopItem>().velocity = Random.Range(500, 500 + ss) / 10000;
@@ -101,7 +101,7 @@ public class BuyController : MonoBehaviour
         newItem.GetComponent<ShopItem>().cooldown = Random.Range(0.2f, 2f);
         lvl *= newItem.GetComponent<ShopItem>().cooldown;
         newItem.GetComponent<ShopItem>().range = Random.Range(0f, lvl/lvlP*2f);
-        lvl /= newItem.GetComponent<ShopItem>().range;
+        lvl /= newItem.GetComponent<ShopItem>().range + 1;
         newItem.GetComponent<ShopItem>().damage = lvl;
         newItem.GetComponent<ShopItem>().level = shelfs.Count;
         newItem.GetComponent<ShopItem>().gunSprite = guns[Random.Range(0, 7)];
