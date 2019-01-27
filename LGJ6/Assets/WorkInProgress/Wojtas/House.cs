@@ -33,7 +33,6 @@ public class House : MonoBehaviour {
             PlayerPrefs.SetFloat("money", PlayerPrefs.GetFloat("money") * 0.75f);
             PlayerPrefs.SetFloat("health", PlayerPrefs.GetFloat("maxHealth"));
         }
-        //TEMPORARY!!!!!!!!!!!!
         
         if (Input.GetKey(KeyCode.RightArrow))
         {
