@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -14,16 +15,37 @@ public class ShopItem : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEn
     public float velocity;
     public float cost;
     public Text textBase;
+    public Sprite gunSprite;
+    public Sprite part1Sprite;
+    public Sprite part2Sprite;
+    public Sprite part3Sprite;
+    public Color gunColor;
+    public Color part1Color;
+    public Color part2Color;
+    public Color part3Color;
+
     private Text text;
     void Start()
     {
         transform.position = transform.parent.transform.position;
         Debug.Log(cost);
-        transform.parent.gameObject.GetComponentInChildren<Text>().text = cost.ToString();
+        //transform.parent.gameObject.GetComponentInChildren<Text>().text = cost.ToString();
         //text = Instantiate(textBase) as Text;
         //text.GetComponent<Text>().text = cost.ToString();
         //text.GetComponent<Text>().transform.SetParent(transform.parent.transform);
         //text.transform.SetParent(transform.parent.transform);
+        gunColor = Random.ColorHSV();
+        part1Color = Random.ColorHSV();
+        part2Color = Random.ColorHSV();
+        part3Color = Random.ColorHSV();
+        gameObject.GetComponent<Image>().sprite = gunSprite;
+        gameObject.GetComponent<Image>().color = gunColor;
+        transform.Find("Part1").gameObject.GetComponent<Image>().sprite = part1Sprite;
+        transform.Find("Part1").gameObject.GetComponent<Image>().color = part1Color;
+        transform.Find("Part2").gameObject.GetComponent<Image>().sprite = part2Sprite;
+        transform.Find("Part2").gameObject.GetComponent<Image>().color = part2Color;
+        transform.Find("Part3").gameObject.GetComponent<Image>().sprite = part3Sprite;
+        transform.Find("Part3").gameObject.GetComponent<Image>().color = part3Color;
     }
     public void OnDrag(PointerEventData eventData)
     {
