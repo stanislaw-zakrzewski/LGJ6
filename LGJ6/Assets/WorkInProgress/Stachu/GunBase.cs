@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GunBase : MonoBehaviour
 {
@@ -72,5 +73,10 @@ public class GunBase : MonoBehaviour
     {
         Destroy(projectileToReturn);
         projectiles.Remove(projectileToReturn);
+    }
+
+    public void OnMouseOver(PointerEventData eventData)
+    {
+        Debug.Log("nos");
     }
 }
