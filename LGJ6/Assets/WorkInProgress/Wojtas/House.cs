@@ -32,7 +32,6 @@ public class House : MonoBehaviour {
             PlayerPrefs.SetFloat("money", 0);
             Destroy(this.gameObject);
         }
-        //TEMPORARY!!!!!!!!!!!!
         
         if (Input.GetKey(KeyCode.RightArrow))
         {
