@@ -29,7 +29,7 @@ public class WeaponStats : MonoBehaviour
     void Update()
     {
         if (PlayerPrefs.GetFloat("damage") != 0) damage.text = PlayerPrefs.GetFloat("damage").ToString();
-        if (PlayerPrefs.GetFloat("cooldown") != 0) cooldown.text = PlayerPrefs.GetFloat("cooldown").ToString();
+        if (PlayerPrefs.GetFloat("cooldown") != 0) cooldown.text = PlayerPrefs.GetFloat("cooldown").ToString("F2");
         if (PlayerPrefs.GetFloat("range") != 0) range.text = PlayerPrefs.GetFloat("range").ToString();
         if (PlayerPrefs.GetFloat("velocity") != 0) velocity.text = PlayerPrefs.GetFloat("velocity").ToString();
         if (PlayerPrefs.GetFloat("cost") != 0) cost.text = ((int)PlayerPrefs.GetFloat("cost")).ToString() + "$";

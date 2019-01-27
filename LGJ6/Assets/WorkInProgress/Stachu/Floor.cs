@@ -32,6 +32,8 @@ public class Floor : MonoBehaviour, IDropHandler
             currentGun.GetComponent<GunBase>().spawner = spawner;
             currentGun.gameObject.GetComponent<SpriteRenderer>().sprite = eventData.pointerDrag.GetComponent<ShopItem>().gunSprite;
             currentGun.gameObject.GetComponent<SpriteRenderer>().color = eventData.pointerDrag.GetComponent<ShopItem>().gunColor;
+            currentGun.gameObject.GetComponent<GunBase>().bulletSprite = eventData.pointerDrag.GetComponent<ShopItem>().bullets[Random.Range(0, 5)];
+            currentGun.gameObject.GetComponent<GunBase>().bulletColor = Random.ColorHSV();
             currentGun.gameObject.transform.Find("Part1").GetComponent<SpriteRenderer>().sprite = eventData.pointerDrag.GetComponent<ShopItem>().part1Sprite;
             currentGun.gameObject.transform.Find("Part1").GetComponent<SpriteRenderer>().color = eventData.pointerDrag.GetComponent<ShopItem>().part1Color;
             currentGun.gameObject.transform.Find("Part2").GetComponent<SpriteRenderer>().sprite = eventData.pointerDrag.GetComponent<ShopItem>().part2Sprite;

@@ -19,10 +19,13 @@ public class ShopItem : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerEn
     public Sprite part1Sprite;
     public Sprite part2Sprite;
     public Sprite part3Sprite;
+    public Sprite bulletSprite;
     public Color gunColor;
     public Color part1Color;
     public Color part2Color;
     public Color part3Color;
+    public Color bulletColor;
+    public List<Sprite> bullets;
 
     private Text text;
     void Start()
