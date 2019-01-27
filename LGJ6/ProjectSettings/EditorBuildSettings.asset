@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Master.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: ca06e1a1fdfc8b546989a152e0e65bb4
+  - enabled: 1
     path: Assets/Scenes/Stachu.unity
     guid: dc839a04404581d43bed8a6fca39e1c2
   m_configObjects: {}
