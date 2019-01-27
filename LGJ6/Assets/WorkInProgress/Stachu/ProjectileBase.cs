@@ -6,6 +6,7 @@ public class ProjectileBase : MonoBehaviour
     public GameObject target;
     public float damage;
     public float velocity;
+    public float lifeSteal;
 
     private void FixedUpdate()
     {
