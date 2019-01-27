@@ -51,7 +51,6 @@ public class House : MonoBehaviour {
             else traveledDistance -= 0.01f;
             PlayerPrefs.SetFloat("traveledDistance", traveledDistance);
         }
-        Debug.Log(traveledDistance);
     }
 
     public void TakeDamage(float damage)
