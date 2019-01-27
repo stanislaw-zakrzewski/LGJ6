@@ -1730,10 +1730,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  floor2Cost: 30
-  floor3Cost: 50
-  floor4Cost: 100
-  floor5Cost: 200
+  floor2Cost: 100
+  floor3Cost: 1000
+  floor4Cost: 10000
+  floor5Cost: 100000
   roof: {fileID: 1652254159795130}
 --- !u!114 &114312498716040652
 MonoBehaviour:
@@ -1749,6 +1749,8 @@ MonoBehaviour:
   maxHealth: 1000
   startingMoney: 200
   traveledDistance: 1
+  health: 0
+  mapMove: {fileID: 0}
 --- !u!114 &114573361413279882
 MonoBehaviour:
   m_ObjectHideFlags: 1
