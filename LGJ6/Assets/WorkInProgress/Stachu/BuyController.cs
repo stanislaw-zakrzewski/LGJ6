@@ -60,7 +60,7 @@ public class BuyController : MonoBehaviour
             newButton.transform.SetParent(itemsPlane.transform);
             newButton.transform.position = new Vector2(shelfs[shelfs.Count - 1].transform.position.x + 156, y);
             shelfs.Add(newButton);
-            totalItemsLength += 156;
+            totalItemsLength += 157;
             if (totalItemsLength > itemsPlane.GetComponent<RectTransform>().rect.size.x)
             {
                 itemsPlane.GetComponent<RectTransform>().sizeDelta = new Vector2(totalItemsLength - 1920, itemsPlane.GetComponent<RectTransform>().sizeDelta.y);
