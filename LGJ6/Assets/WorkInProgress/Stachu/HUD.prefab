@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 222954068745515952}
   - component: {fileID: 114931291673945856}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Funds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b61d3388765954296e755eb985c2ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 1109986967198440, guid: 98c781c07bf6eef429ba307ba684f29a, type: 2}
+  gun: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef, type: 2}
   floor: {fileID: 0}
   spawner: {fileID: 0}
   level: 2
@@ -1002,6 +1002,19 @@ MonoBehaviour:
   shelf: {fileID: 1664319271628362, guid: 382ff87c676e7f34e9f4e4589d4f2573, type: 2}
   item: {fileID: 1752484386654080, guid: 36d73849ddb84de4cbeea71e0fcfa685, type: 2}
   gun: {fileID: 0}
+  guns:
+  - {fileID: 21300000, guid: b02319b39caf1b149af43b49f0e12549, type: 3}
+  - {fileID: 21300000, guid: 23745aac06b279244a0828437417c88e, type: 3}
+  - {fileID: 21300000, guid: 613883ebf8f49514f9c1c8e5055edcee, type: 3}
+  - {fileID: 21300000, guid: dc5d892ba5cf9d2458801e4616de1df9, type: 3}
+  - {fileID: 21300000, guid: 125742795d09a2b4fa3cbd7c8f6758b1, type: 3}
+  - {fileID: 21300000, guid: 0feb73f369e756e4b9a4b5fc7183a448, type: 3}
+  - {fileID: 21300000, guid: e3d136d35a3d30d4db64cb6c359c2bd5, type: 3}
+  - {fileID: 21300000, guid: b49c4f8236d2d064a87ae8231084d9a9, type: 3}
+  parts:
+  - {fileID: 21300000, guid: 6913930392dbff0438d0fc1a56f53a71, type: 3}
+  - {fileID: 21300000, guid: 2686095a81e2cfa4d963a6e290c25e25, type: 3}
+  - {fileID: 21300000, guid: abc6e4bf4553f3e47a6a2c1410e5d8dc, type: 3}
 --- !u!114 &114242621034581858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1307,7 +1320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1393,7 +1406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b61d3388765954296e755eb985c2ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 1109986967198440, guid: 98c781c07bf6eef429ba307ba684f29a, type: 2}
+  gun: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef, type: 2}
   floor: {fileID: 0}
   spawner: {fileID: 0}
   level: 4
@@ -1526,7 +1539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b61d3388765954296e755eb985c2ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 1109986967198440, guid: 98c781c07bf6eef429ba307ba684f29a, type: 2}
+  gun: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef, type: 2}
   floor: {fileID: 0}
   spawner: {fileID: 0}
   level: 5
@@ -1615,7 +1628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b61d3388765954296e755eb985c2ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 1109986967198440, guid: 98c781c07bf6eef429ba307ba684f29a, type: 2}
+  gun: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef, type: 2}
   floor: {fileID: 0}
   spawner: {fileID: 0}
   level: 3
@@ -1706,7 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b61d3388765954296e755eb985c2ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 1109986967198440, guid: 98c781c07bf6eef429ba307ba684f29a, type: 2}
+  gun: {fileID: 1730778909636954, guid: b61ada23f9b852747ac9edebb127baef, type: 2}
   floor: {fileID: 0}
   spawner: {fileID: 0}
   level: 1
@@ -1722,7 +1735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1937,7 +1950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2995,8 +3008,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -731, y: 129.755}
-  m_SizeDelta: {x: -1614.0901, y: -433.23}
+  m_AnchoredPosition: {x: -735.615, y: 68.15015}
+  m_SizeDelta: {x: -1657.37, y: -558.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224836171233057586
 RectTransform:
