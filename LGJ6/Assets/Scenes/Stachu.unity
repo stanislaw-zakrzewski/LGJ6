@@ -442,12 +442,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1322188188016770, guid: 80811420615f376498cf382e93a146c0,
     type: 2}
   m_PrefabInternal: {fileID: 1078004497}
---- !u!114 &792538183 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114448671315204438, guid: 80811420615f376498cf382e93a146c0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1078004497}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &861790804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1584379442516664, guid: 373c6055778400c4b861cb4378ab7110,
@@ -641,11 +635,6 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114313075435184848, guid: 80811420615f376498cf382e93a146c0,
-        type: 2}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 792538183}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80811420615f376498cf382e93a146c0, type: 2}
   m_IsPrefabAsset: 0
