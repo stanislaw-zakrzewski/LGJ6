@@ -29,8 +29,9 @@ public class House : MonoBehaviour {
         //Debug.Log("siema " + money);
         if (health <= 0f)
         {
-            PlayerPrefs.SetFloat("money", 0);
-            Destroy(this.gameObject);
+            health = maxHealth;
+            PlayerPrefs.SetFloat("money", PlayerPrefs.GetFloat("money") * 0.75f);
+            PlayerPrefs.SetFloat("health", PlayerPrefs.GetFloat("maxHealth"));
         }
         
         if (Input.GetKey(KeyCode.RightArrow))
