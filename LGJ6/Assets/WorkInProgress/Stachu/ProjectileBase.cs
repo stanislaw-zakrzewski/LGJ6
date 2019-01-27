@@ -10,7 +10,7 @@ public class ProjectileBase : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(target == null)
+        if (target == null)
         {
             gun.ReturnProjectile(gameObject);
         }
@@ -22,8 +22,16 @@ public class ProjectileBase : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.GetComponent<EnemyBase>())
+        if (collision.gameObject.GetComponent<EnemyBase>())
         {
+            if (lifeSteal > 0)
+            {
+                PlayerPrefs.SetFloat("health", PlayerPrefs.GetFloat("health") + lifeSteal);
+                if (PlayerPrefs.GetFloat("health") > PlayerPrefs.GetFloat("maxHealth"))
+                {
+                    PlayerPrefs.SetFloat("health", PlayerPrefs.GetFloat("maxHealth"));
+                }
+            }
             collision.gameObject.GetComponent<EnemyBase>().TakeDamage(damage);
             gun.ReturnProjectile(gameObject);
         }

@@ -43,6 +43,7 @@ public class GunBase : MonoBehaviour
             GameObject pom = Instantiate(bulletType);
             pom.GetComponent<ProjectileBase>().damage = damage;
             pom.GetComponent<ProjectileBase>().velocity = velocity;
+            pom.GetComponent<ProjectileBase>().lifeSteal = range;
             pom.GetComponent<ProjectileBase>().target = target;
             pom.GetComponent<ProjectileBase>().gun = this;
             pom.GetComponent<SpriteRenderer>().sprite = bulletSprite;
