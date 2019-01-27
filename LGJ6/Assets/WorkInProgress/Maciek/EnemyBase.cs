@@ -34,6 +34,8 @@ public class EnemyBase : MonoBehaviour {
         prevLevel = 0;
         RngLook();
         SetToColor(Color.white);
+        AdjustToLevel();
+        RngLook();
     }
 	
 	// Update is called once per frame
