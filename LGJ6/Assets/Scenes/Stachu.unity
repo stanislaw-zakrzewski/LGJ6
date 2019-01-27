@@ -357,7 +357,8 @@ Prefab:
       propertyPath: mapMove
       value: 
       objectReference: {fileID: 2076222234}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114573361413279882, guid: 373c6055778400c4b861cb4378ab7110, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 373c6055778400c4b861cb4378ab7110, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &511936997
@@ -631,6 +632,26 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: b306c94ae68bbb241b491d185720a556,
         type: 3}
+    - target: {fileID: 114579740083380368, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: m_Text
+      value: Next Max Health
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579740083380368, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579740083380368, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579740083380368, guid: 80811420615f376498cf382e93a146c0,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80811420615f376498cf382e93a146c0, type: 2}
   m_IsPrefabAsset: 0
