@@ -65,12 +65,12 @@ public class Spawner : MonoBehaviour
 
     private void AdjustSpawn(float distance)
     {
-        m = 1 + (int)((3 + distance * distance) / 10f);
+        m = 1 + (int)((3 + Mathf.Pow(distance, 1.3f)) / 10f);
         
         float ss = 1f / (1f + Mathf.Pow(2.718f, -distance / 10000f))*1000;
         s = Random.Range(10, 10 + ss) / 10000f;
 
-        h = 5 + distance * s * 50;
+        h = 5 + Mathf.Pow(distance, 1.3f) * s * 50;
                     
         Spawn(h, s, d, EnemyBase.MovingType.linear, m);
     }
