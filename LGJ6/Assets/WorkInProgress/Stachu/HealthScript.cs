@@ -36,14 +36,14 @@ public class HealthScript : MonoBehaviour
             health = PlayerPrefs.GetFloat("health");
             slider.value = health / maxHealth;
             currentHealthText.text = ((int)health).ToString() + " / " + ((int)maxHealth).ToString();
-            maxHealthText.text = ((int)maxHealth).ToString();
+            maxHealthText.text = ((int)maxHealth + nextHealthDifference).ToString();
         }
         if (PlayerPrefs.GetFloat("maxHealth") != maxHealth)
         {
             maxHealth = PlayerPrefs.GetFloat("maxHealth");
             slider.value = health / maxHealth;
             currentHealthText.text = ((int)health).ToString() + " / " + ((int)maxHealth).ToString();
-            maxHealthText.text = ((int)maxHealth).ToString();
+            maxHealthText.text = ((int)maxHealth + nextHealthDifference).ToString();
         }
     }
 

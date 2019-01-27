@@ -26,6 +26,7 @@ public class House : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        money = PlayerPrefs.GetFloat("money");
         //Debug.Log("siema " + money);
         if (health <= 0f)
         {
