@@ -16,6 +16,8 @@ public class BuyController : MonoBehaviour
     private List<GameObject> shelfs;
     private List<GameObject> items;
     private float totalItemsLength;
+    public List<Sprite> guns;
+    public List<Sprite> parts;
 
     void Start()
     {
@@ -77,6 +79,10 @@ public class BuyController : MonoBehaviour
         newItem.GetComponent<ShopItem>().velocity = shelfs.Count * 0.1f;
         newItem.GetComponent<ShopItem>().range = 1000;
         newItem.GetComponent<ShopItem>().level = shelfs.Count;
+        newItem.GetComponent<ShopItem>().gunSprite = guns[Random.Range(0, 7)];
+        newItem.GetComponent<ShopItem>().part1Sprite = parts[Random.Range(0, 2)];
+        newItem.GetComponent<ShopItem>().part2Sprite = parts[Random.Range(0, 2)];
+        newItem.GetComponent<ShopItem>().part3Sprite = parts[Random.Range(0, 2)];
         items.Add(newItem);
 
     }
